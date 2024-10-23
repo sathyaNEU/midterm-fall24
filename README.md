@@ -2,8 +2,8 @@
 
 ## How to submit
 
-- **Fork this repository and implement your code on your fork**.
-- **Add nevchris242@gmail.com, nehachandra.dev@gmail.com as collaborators to your fork**.
+- **Fork this repository, implement your code on your fork and make sure to push it when you're done**.
+- **Add gade.as@northeastern.edu, devarapalli.n@northeastern.edu as collaborators to your fork**.
 - **Do not make your fork public and do not create a pull request**.
 - **Your last commit time will be recorded as your submission time**.
 
