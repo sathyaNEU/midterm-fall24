@@ -27,7 +27,7 @@ Implement the `MyCircularQueue` class:
 
 **Input**
 ["MyCircularQueue", "enQueue", "enQueue", "enQueue", "enQueue", "Rear", "isFull", "deQueue", "enQueue", "Rear"]
-[[3], [1], [2], [3], [4], [], [], [], [4], []]
+[[3], [1], [2], [3], [4], [], [], [], [4], []] <br>
 **Output**
 [null, true, true, true, false, 3, true, true, true, 4]
 
