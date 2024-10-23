@@ -1,31 +1,77 @@
 package org.example;
 
 public class MyCircularQueue {
-    public MyCircularQueue(int k) {
-        throw new UnsupportedOperationException("Not implemented yet");
-    }
+    Integer[] cq;
+    int size;
+    int front;
+    int rear;
 
-    public boolean enQueue(int value) {
-        throw new UnsupportedOperationException("Not implemented yet");
-    }
-
-    public boolean deQueue() {
-        throw new UnsupportedOperationException("Not implemented yet");
-    }
-
-    public int Front() {
-        throw new UnsupportedOperationException("Not implemented yet");
-    }
-
-    public int Rear() {
-        throw new UnsupportedOperationException("Not implemented yet");
+    public MyCircularQueue(int n) {
+        this.size = n;
+        this.cq = new Integer[n];
+        this.front = -1;
+        this.rear = -1;
     }
 
     public boolean isEmpty() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        return front == -1;
     }
 
     public boolean isFull() {
-        throw new UnsupportedOperationException("Not implemented yet");
+        // Check if the queue is full
+        return (this.front == this.rear + 1) || (this.front == 0 && this.rear == size() - 1);
     }
+
+    public int size() {
+        return cq.length;
+    }
+
+
+    public Integer Front() {
+        if (isEmpty()) {
+            System.out.println("Queue is empty");
+            return null;  // Return null when the queue is empty
+        }
+        return cq[front];
+    }
+
+    public Integer Rear() {
+        if (isEmpty()) {
+            System.out.println("Queue is empty");
+            return null;  // Return null when the queue is empty
+        }
+        return cq[rear];
+    }
+
+    public boolean enQueue(int x) {
+        if (isFull()) {
+            return false;
+        }
+        if (isEmpty()) {
+            front = 0;
+        }
+        rear = (rear + 1) % size;
+        cq[rear] = x;
+        return true;
+    }
+
+    public boolean deQueue() {
+        if (isEmpty()) {
+            return false; //the queue is empty
+        }
+        else{
+            int val = cq[front];
+            cq[front] = null;  // Optional: Clear the dequeued element
+            if (front == rear) {
+                // The queue becomes empty
+                front = -1;
+                rear = -1;
+            } else {
+                front = (front + 1) % size;
+            }
+            return true; //dequeued element is val, but the operation is successfull, hence returning true
+        }
+    }
+
 }
+
