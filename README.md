@@ -4,8 +4,8 @@
 
 - **Fork this repository and implement your code on your fork**.
 - **Add nevchris242@gmail.com, nehachandra.dev@gmail.com as collaborators to your fork**.
-- **Do not make your fork public**.
-- **Your last commit time will be recorded as your submission time**
+- **Do not make your fork public and do not create a pull request**.
+- **Your last commit time will be recorded as your submission time**.
 
 ## Problem Statement
 Design your implementation of the circular queue. The circular queue is a linear data structure in which the operations are performed based on FIFO (First In First Out) principle, and the last position is connected back to the first position to make a circle. It is also called "Ring Buffer".
