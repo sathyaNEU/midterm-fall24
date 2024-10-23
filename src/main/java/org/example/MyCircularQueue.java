@@ -26,9 +26,11 @@ public class MyCircularQueue {
         return cq.length;
     }
 
+
     public int Front() {
         if (isEmpty()) {
             System.out.println("Queue is empty");
+            return -1;  // Return null when the queue is empty
         }
         return cq[front];
     }
@@ -36,6 +38,7 @@ public class MyCircularQueue {
     public int Rear() {
         if (isEmpty()) {
             System.out.println("Queue is empty");
+            return -1;  // Return null when the queue is empty
         }
         return cq[rear];
     }
